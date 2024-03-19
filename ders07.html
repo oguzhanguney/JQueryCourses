@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#hide").click(function(){
+                $(".par1").hide(500);//hide metodu içerisine ms cinsinden zaman vererek süreyi ayarlayabiliriz.
+            })
+            $("#show").click(function(){
+                $(".par1").show(1000);//show metodu içerisine ms cinsinden zaman vererek süreyi ayarlayabiliriz.
+            })
+            $(".toggle").click(function(){
+
+                $(".par2").toggle();//toggle metodu da parametre olarak zaman alır.
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <p class="par1">Butonlara tıklayınız.</p>
+    <button id="hide">Gizle</button>
+    <button id="show">Göster</button><br><hr>
+    <p class="par2">Asdas adsasddsafd safdsafdasf</p>
+    <button class="toggle">Toggle</button>
+
+    
+</body>
+</html>
+
+<!-- Bu derste jquerydeki efektleri inceleyeceğiz. -->
+
+<!--1)hide efekti:
+        -saklama işlemi yapar.
+    2)show efekti:
+        - gösterme işlemi yapar.
+    3)toggle efekti:
+        -hide ve show metotlarını birlikte yapmamızı sağlar.
+
+ -->
