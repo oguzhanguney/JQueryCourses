@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Dersleri</title>
-    <style src="jquery.min.js"></style>
+    <script src="jquery.min.js"></script>
+    <script>
+        // öncelikle yapmamız gereken belgenin hazır olup olmadığını kontrol etmek.
+        $(document).ready(function(){
+            //jquery kodları
+        })
+
+    </script>
 </head>
 <body>
-    <!-- bu derste jquery nin söz diziminden bahsedeceğiz. -->
-    <!-- jquery ile html elementleri seçilir -->
+
     
 </body>
 </html>
+
+
+<!-- bu derste jquery nin söz diziminden bahsedeceğiz. -->
+<!-- jquery ile html elementleri seçilir ve eylemler gerçekleştirilir. -->
+
+$(selector).action()
+<!-- $ işareti: jquery kod yazmak için 
+     selector:  html elementini bulmak için
+     action: ögeler üzerinde gerçekleşekecek olan eylemi belirtir.
+-->
+
+<!--  -->
+$(this).hide()  <!-- hide diyerek mevcut elemanı gizle diyoruz. -->
+$("p").hide()   <!-- p lerin hepsini gizle-->
+$(".test").show() <!-- classı test olan bütün elemanları göster -->
+$("#test").show() <!-- idsi test olan bütün elemanları göster -->
+
