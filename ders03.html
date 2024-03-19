@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            $(".but1").click(function(){
+                $(".par1").slideToggle();
+            })
+
+            $(".par2").on("click",function(){
+                $(this).hide();
+            })
+            $(".par3").on({
+
+                mouseenter:function(){
+                    $(this).css("background-color","green");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","yellow");
+                },
+                click:function(){
+                    $(this).css("background-color","red");
+                }
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <p class="par1">Toggle uygulanacak paragraf</p>
+    <button class="but1">Apply slideToggle</button><br><hr>
+
+    <p class="par2">"on" eventini uygulamak  için tıklayın.</p><br><br>
+    <p class="par3">"on" eventi ile birden fazla evet kullanımını görmek için mouse ile üzerine gelin,ayrılın ve tıklayın.</p>
+    
+</body>
+</html>
+
+<!--Bu derste Jquery eventleri inceleyeceğiz.
+    Jquery de html sayfasındaki etkinliklere yanıt vermek için özel olarak hazırlanmış bir eventler vardır.Bir web sayfasının yanıtlayabileceği tüm ziyaretçilerin 
+    farklı eylemleri event olarak adlandırılır. 
+
+    -Aslında document ready bir eventtir.ready eventi belge tam olarak yüklendiginde bir işlemi yürütmemize izin verir.burada html sayfası tam olarak clientte yüklendiğinde
+     içersine yazdıgımız function sayesinde jquerynin yüklenmesini sağlattırıyoruz.
+    -Ready metodu body etiketi içerisinde onload etiketiyle birlikte kullanılmamalıdır.
+
+    -$(document).ready(function(){})  bu işlemi  $(function(){}) böyle de kullanabiliriz.
+
+    1)Click : Butona tıklandığı zaman çalıştır.
+    2)slideToggle: Animasyon şeklinde aşağı yukarı açılıp kapanmasını sağlar.
+    3)on : bir veya birden fazla eventi aynanda kullanmamızı sağlar.
+
+
+ -->
