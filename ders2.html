@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        // öncelikle yapmamız gereken belgenin hazır olup olmadığını kontrol etmek.
+        $(document).ready(function(){
+            
+            $("#btn1").click(function(){
+                
+                $("#par1").hide()//artık butona tıkladıktan sonra p1 etiketlerini gizleyeceğiz.
+            })
+
+            $(".btn2").click(function(){
+
+                $(".par2").hide()//artık butona tıkladıktan sonra p3 etiketlerini gizleyeceğiz.
+
+            })
+
+            $(".btn3").click(function(){
+
+                $("*").hide() //sayfadaki tüm elemanları gizler.
+            })
+
+            $(".btn4").click(function(){
+
+                $(this).hide() //mevcut olan elementi gizler. yani this olarak buton 4 ü almış oluyor.
+            })
+
+            $(".btn5").click(function(){
+
+                $("ul li:first").hide() // ul nin ilkini seçip li nin ilk ögesini gizliyoruz.
+            })
+
+            $(".btn6").click(function(){
+
+                $("ul li:first-child").hide() // ul lerden li lerin ilk ögesini gizle.
+            })
+
+            $(".btn7").click(function(){
+
+                $("[href]").hide() // href özelligine sahip tüm linkleri gizler.
+            })
+            $(".btn8").click(function(){
+
+                $("a[target='_blank']").hide() // linklerin target özelligi blank olanları gizler.
+            })
+            $(".btn9").click(function(){
+
+                $(":button").hide() // butonları ve type ı button olanları gizler.
+            })
+
+            $(".btn10").click(function(){
+
+                $("tr:even").hide() // tablodaki çift olan satırları gizler .
+            })
+
+            $(".btn11").click(function(){
+
+                $("tr:even").css("background-color","green")// tablodaki çift olan satırların arkaplan rengini değiştirir.
+                $("tr:odd").css("background-color","yellow")
+            })  
+            
+            
+        })
+
+    </script>
+</head>
+<body>
+
+    <h2>Header</h2>
+    <p id="par1">First paragraph</p>
+    <p class="par2">Second paragraph</p>
+    <button id="btn1">Click and hide(p1)</button><br>
+    <button class="btn2">Click and hide(p2)</button><br>
+    <button class="btn3"> Click and all elements hide</button><br>
+    <button class="btn4">Click and available element hide</button><br><hr>
+
+    <ul>
+        <li>Kahve</li>
+        <li>Çay</li>
+    </ul>
+    <ul>
+        <li>Kola</li>
+        <li>Meyve Suyu</li>
+        <li>Gazoz</li>
+    </ul><br>
+    <button class="btn5"> Click and hide(ul li:first)</button><br>
+    <button class="btn6">Click and hide(ul li:first-child) </button><br><hr>
+
+    <p><a href="#" target="_blank">Link1(target blank)</a></p><br>
+    <p><a href="#"> Link2(no target)</a></p><br>
+
+    <input type="button" class="btn9" value="Click and buttons and type buttons hide"><br>
+    <button class="btn7"> Click and all links hide</button><br>
+    <button class="btn8"> Click and target _blank link hide</button><br><hr>
+
+    <table>
+        <tr>
+            <th>Şirket</th>
+            <th>Ülke</th>
+        </tr>
+        <tr>
+            <td>AOS Yazılım</td>
+            <td>Türkiye</td>
+        </tr>
+        <tr>
+            <td>OG Yazılım</td>
+            <td>Türkiye</td>
+        </tr>
+    </table><br>
+
+    <button class="btn10">Click and even row hide</button><br>
+    <button class="btn11">Click and change background-color</button><br><hr>
+
+
+    
+</body>
+</html>
+
+<!-- bu derste jquery seçicilerden bahsedeceğiz. yani selector kısmından bahsecedeceğiz. seçiciler html ögelerini seçmemize ve değiştirmemize izin verir -->
+<!-- jquery de tüm seçiciler $ işareti ve parantez ile başlar -->
+
+<!-- Çok kullanılan seçiciler :-->
+
+<!-- 1-Element seçiciler:
+        elementin adına göre seçim yapar.
+
+        $("p:first").hide() -> p elementinin ilkini seçeriz.
+        $("p.par2"").hide() ->classı par2 olan tüm p elementleri seçeriz.
+-->
