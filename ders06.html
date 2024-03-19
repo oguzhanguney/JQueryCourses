@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(){
+                alert("submit gerçekleşti.");
+            })
+            $(".inp1").change(function(){
+                alert("Değişiklik gerçekleşti.");
+            })
+            $(".inp2").focus(function(){
+                $(this).css("background-color","red");
+            })
+            $(".inp2").blur(function(){
+                $(this).css("background-color","green");
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <form action="">
+        AD: <input type="text" name="Ad" value="Oguzhan"><br>
+        SOYAD: <input type="text" name="Soyad" value="Guney"><br>
+        <input type="submit" value="Kaydet"><br><hr>
+        Change event:<input type="text" class="inp1" ><br><hr>
+        focus and blur: <input type="text" class="inp2">
+        
+
+
+    </form>
+    
+</body>
+</html>
+
+<!-- Bu derste Form event leri inceleyeceğiz. -->
+
+<!--1)Submit:
+        -bir form gönderme işlemi için gerçekleşir. 
+    2)Change:
+        -bir ögenin değeri değiştirildiğinde çalışır.yalnızca "input" "text area" ve "select" elementleri için çalışır.
+    3)focus:
+        -bir öge netlendiğinde yani fare tıklaması veya sayfa gezinme oluştuğu zaman çalışır.
+    4)blur:
+        -focusun tam tersidir.netlik kaldırıldığında çalışır.
+
+ -->
