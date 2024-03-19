@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        var i=0;
+        var b=0;
+        var c=0;
+        $(document).ready(function(){
+            $(".inp1").keypress(function(){
+                $(".sp1").text(i+=1);
+            })
+            $(".inp2").keydown(function(){
+                $(".sp2").text(b+=1);
+                $(".inp2").css("background-color","yellow");
+            })
+            $(".inp3").keyup(function(){
+                $(".sp3").text(c+=1);
+                $(".inp3").css("background-color","green");
+            })
+            $(".inp4").keydown(function(event){
+                $(".p1").html("Key:"+event.which)
+            })
+
+        })
+    </script>
+</head>
+<body>
+    Adınızı Giriniz: <input class="inp1" type="text">
+    <p>Key press <span class="sp1">0</span></p><br><hr>
+    Adınızı Giriniz: <input class="inp2" type="text">
+    <p>Key press <span class="sp2">0</span></p><br><hr>
+    Adınızı Giriniz: <input class="inp3" type="text">
+    <p>Key press <span class="sp3">0</span></p><br><hr>
+    Adınızı Giriniz: <input class="inp4" type="text">
+    <p class="p1"></p>
+
+    
+</body>
+</html>
+
+<!-- Bu derste Klavye event lerini inceleyeceğiz. -->
+
+<!-- 1)keypress event:
+        -push'a basılma olayını tetikler.
+     2) keydown event:
+        -basıldıgı anda tetiklenir shift ctrl vb yakalamak için kullanırız.
+     3)keyup event:
+        -basılıp çekildiği anda tetiklenir.
+
+    Ek olarak burada event.which propertisinden bahsedecegiz.bu properti hangi klavye tuşunu yada fare tuşunu basıldığını yakalamamızı sağlıyor. aşçi kodunu dönderir.
+    eventi mousedown olarak kullanıp mouse içinde gösterebiliriz.
+
+
+
+
+
+ -->
