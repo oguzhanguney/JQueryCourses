@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".par1").dblclick(function(){
+                alert("Alert");
+            })
+            $("div").mouseup(function(){
+                $(this).after("<p style='color:green';> Mouse Up </p>")
+            });
+            $("div").mousedown(function(){
+                $(this).after("<p style='color:red';> Mouse Down </p>")
+            });
+            $(".par2").mouseenter(function(){
+                $(".par2").css("background-color","yellow")
+            });
+            $(".par2").mouseleave(function(){
+                $(".par2").css("background-color","red")
+            });
+            $(".par3").hover(function(){
+                $(this).css("background-color","yellow");
+            },function(){
+                $(this).css("background-color","green");
+
+            });
+            $(document).mousemove(function(event){
+                $("span").text(event.pageX+","+event.pageY)
+            });
+            
+
+
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <p class="par1"> Click eventini  için bu paragrafa tıklayınız.</p><hr>
+
+    <div>Click for mousedown and mouseup</div><hr>
+
+    <p class="par2"> Hover cursor for mouseenter and mouseleave</p><br>
+
+    <p class="par3"> -> Hover event <- </p><hr>
+
+    <span>Click for mousemove</span>
+    
+</body>
+</html>
+
+<!-- 
+    Bu derste mouse evetlerini göreceğiz.
+
+    1)Click and Double Click(dblclick):
+        -Click eventleri bir ögeye tiklandiğinda yada çift tikladiğinda çalişan eventtir. 
+    2)Mousedown ve mouseup:
+        -bir ögeye sol click ile tıklanıp bırakılmadıgı zaman mousedown.
+        -tıklanıp bırakıldıgı zaman mouseup çalışır.
+    3)Mouseenter ve mouseleave:
+        -bir ögenin üstüne gelindiginde mouseneter
+        -bir ögenin üzerinden ayrılıdıgında mouseleave çalışır.
+    4)Hover:
+        -Fare işaretçisinin seçilen elemanların üzerine geldiğinde çalışacak iki işlevi birlikte verir.mouseenter ve mouseleavi birlikte kullanmış oluruz.
+    5)Mousemove:
+        -fare imleci seçilen elemanın içinde hareket ettiğinde ortaya çıkar.fareyi 1 px olarak hareket ettirdiğimizde mousemove hareketi oluşur.
+
+ -->
