@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("button").click(function(){
+                //$("#div1").remove(); // 
+                //$("#div1").empty(); //
+                $("p").remove(".test"); // plerin içerisinde classı test olanı sildirdik.
+            })
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <div id="div1" style="height: 500px;width: 800px; border: 1px solid black;">
+        Bağlantısız elemanları
+        <p>paragraf</p>
+        <p class="test">paragraf2</p>
+        <h1>başlık</h1>
+    </div>
+    <button>Sil</button>
+
+
+    
+</body>
+</html>
+
+<!-- Bu derste  Remove metodundan bahsedeceğiz. -->
+
+<!--Remove metodu ile html ögelerini kaldırabiliriz.html ögelerini kaldırmak için 2 metot var.
+    
+    1)remove:
+        -seçilen elemanı ve içerisinde bulunan alt  ögelerini kaldırabiliyoruz.
+    2)empty:
+        -sadece seçilen elementin alt ögelerini kaldırır.
+
+
+ -->
