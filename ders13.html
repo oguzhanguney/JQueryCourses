@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#par1").text("set edilen deger");
+            });
+            $("#btn2").click(function(){
+                $("#par2").html("<b>set edilen deger</b>");
+            });
+            $("#btn3").click(function(){
+                $("#inp1").val("Oguzhan Guney");
+            });
+
+            $("#btn4").click(function(){
+                $("#link").attr({
+                    "href":"www.google.com",
+                    "title":"Yeni Title"
+                });
+            });
+
+
+        })
+
+
+    </script>
+
+
+</head>
+<body>
+    <p id="par1">Paragraf 1</p>
+    <p id="par2">Paragraf 2</p>
+
+    <p>Girilen Değer: <input type="text" id="inp1" value="Değer Gir"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set Html</button>
+    <button id="btn3">Set Val</button>
+    <br><hr>
+    <a href="www.og.com.tr" id="link">Linke tıkla</a><br>
+    <button id="btn4">Use Attr</button>
+
+
+
+    
+</body>
+</html>
+
+<!-- Bu derste Html Set konusunu işleyeceğiz. -->
+
+<!-- html get metotlarını buradada kullanacagız.tek farkı bu metotlarla birlikte set işlemi yapabilecegiz.
+    get metotlarında parantez içine herhangi bir değer girmemiştik bu bize get işlemi sağlamıştı. 
+    şimdi parantez içerisine girdigimiz degerle birlikte  dom elementlerini set etmiş olacagız 
+
+    Attr:
+        -attribute kısaltımışıdır.herhangi bir dom elementinin attributenü değiştirme özelliği verir.
+        -birden fazla attribute değiştirmek istiyorsak süslü parantezler içerisinde değiştirebiliriz
+
+
+
+
+ -->
