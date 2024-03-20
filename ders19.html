@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .descendants *{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            //$("div").children().css({"color":"red","border":"2px solid red"});//divin ilk çocuklarını boyar.
+            $("div").find("span").css({"color":"red","border":"2px solid red"});//div içersinde span varsa boyayacak
+
+        })
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <div class="descendants" style="width: 500px;">div(şimdiki eleman)
+        <p>p(child)
+            <span>span</span>
+        </p>
+        <p>p(child)
+            <span>span</span>
+        </p>
+    </div>
+    
+</body>
+</html>
+
+<!-- Bu derste Descendants özelliğini inceleyeceğiz. -->
