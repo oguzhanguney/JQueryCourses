@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        //örnek
+        function appendText(){
+                var txt1="<p> Text1</p>"; //string
+                var txt2=$("<p></p>").text("Text2"); //jquery
+                var txt3=document.createElement("p"); //javascript
+                txt3.innerHTML="Text3"
+
+            //bu fonksiyon içerisinde bunları birleştirme işlemi yapalım.
+            $("body").append(txt1,txt2,txt3)
+        }
+
+        $(document).ready(function(){
+
+            $("#btnText").click(function(){
+                $("p").append("Append Eklenen");
+            })
+            $("#btn2").click(function(){
+                $("p").prepend("Prepend Eklenen");
+            })
+            $("#btn3").click(function(){
+                $("p").after("after Eklenen");
+            })
+            $("#btn4").click(function(){
+                $("p").before("before Eklenen");
+            })
+            $("#btnListe").click(function(){
+                $("ol").append("<li>Append Eklenen Liste</li>");
+            })
+            $("#btnListe2").click(function(){
+                $("ol").prepend("<li>Prepend Eklenen Liste</li>");
+            })
+            $("#btnListe3").click(function(){
+                $("ol").after("<li>after Eklenen Liste</li>");
+            })
+            $("#btnListe4").click(function(){
+                $("ol").before("<li>before Eklenen Liste</li>");
+            })
+
+
+
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+    <p>ilk paragraf</p>
+    <p>ikinci paragraf</p>
+
+    <ol>
+        <li>
+            Kahve
+        </li>
+        <li>
+            Çay
+        </li>
+    </ol>
+
+    <button id="btnText">append paragraf</button>
+    <button id="btn2">prepend paragraf</button>
+    <button id="btn3">after paragraf</button>
+    <button id="btn4">before paragraf</button>
+    <button id="btnListe"> append Liste Ekle</button>
+    <button id="btnListe2"> prepend Liste Ekle</button>
+    <button id="btnListe3"> after Liste Ekle</button>
+    <button id="btnListe4"> before Liste Ekle</button><br><hr>
+
+    <!-- örnek -->
+    <button onclick="appendText()">Metinler Ekle</button>
+
+
+
+
+
+    
+</body>
+</html>
+
+
+<!-- Bu derste Add Elementlerini işleyeceğiz -->
+
+<!-- Jquery ile yeni bir içerik eklemek çok kolaydır.yeni içerik eklemek için kullanılan 4 jquery yöntemi vardır.
+    
+    1)append:
+        -seçilen ögelerin sonuna içerik eklemesi yapar.
+    2)prepend:
+        -seçilen ögelerin başına içerik eklemesi yapar.
+    3)after:
+        -seçilen ögelerden sonra içerik ekler.
+    4)before:
+        -seçilen ögeden önce içerik ekler.
+
+
+    örnek:append içerisine birden fazla özellik yazma işlemini inceleyeceğiz.
+
+
+
+ -->
