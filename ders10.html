@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var div=$("div")//div ögesini var değişkenine atadık.
+                div.animate({left:'500px'},"slow");
+                div.animate({fontSize:'3em'},"slow");
+
+                
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <button>Tıkla</button>
+    <div style="background-color: #98bf21;height: 300px;width: 300px;position: absolute;">Merhaba</div>
+
+    
+</body>
+</html>
+
+<!-- bu derste animate metodundan bahsedeceğiz. -->
+
+<!-- Jquery de animate metodu özel animasyonlar oluşturmamızı sağlar.
+     Sözdizimi : $(selector).animate({params},hız,geri dönüş)
+                *params parametresi gerekli css özelliklerini tanımaldıgımız yer.
+                *hız parametresi fast slow yada ms cinsinden deger alabilir.
+                *geri dönüş : animasyon tamamlandıktan sonra yapılacak işlevleri gösterir. 
+
+    note:Varsayılan olarak tüm html ögeleri statik bir konuma sahiptir.konumu değiştirmek istersek css konum özelliğini relative fix yada absolute olarak ayarlamalıyız.
+
+    1-script ilk part için buttondan sonra  kopyala :
+        $("div").animate({
+                    left:'250px',
+                    height:'+=100px', //height:toggle diyerek toggle özelliği verebiliriz. hide show gibi metotlarıda animation içerisinde kullanabiliriz.
+                    width:'+=100px'
+                    })
+
+    note:Animate bir sırayı takip eder.birden fazla animate özelligi verirsek kendi iç sırasına göre  çalışma işlemi gerçekleştirir.
+    2-script ikinci part için buttondan sonra kopyala:
+        var div=$("div")//div ögesini var değişkenine atadık.
+        div.animate({height:'300px',opacity:'0.4'},"slow");
+        div.animate({width:'300px',opacity:'0.8'},"slow");
+        div.animate({height:'100px',opacity:'0.4'},"slow");
+        div.animate({width:'100px',opacity:'0.8'},"slow");
+
+    3-div içerisine metin ekledikten sonra:
+        var div=$("div")//div ögesini var değişkenine atadık.
+        div.animate({left:'500px'},"slow");
+        div.animate({fontSize:'3em'},"slow");
+
+
+ -->
