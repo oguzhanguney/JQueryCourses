@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("Arka plan rengi:"+$("p").css("background-color"))
+            })
+            $(".btn2").click(function(){
+                $("p").css({"background-color":"yellow","font-size":"200%"});
+            })
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <p style="background-color: #ff0000;">Kırmızı paragraf</p>
+    <p style="background-color: blue;">Mavi paragraf</p>
+    <button id="btn1">Değiştir:alert</button>
+    <button class="btn2">Değiştir</button>
+    
+
+</body>
+</html>
+
+<!-- Bu derste css() metodu ile html elementlerinin csslerini nasıl değiştireceğimizi göstereceğim. -->
+
+<!-- $("p").css("background-color","yellow"); tek bir parametre için kullanım bu şekilde. -->
+<!-- $("p").css({"background-color":"yellow","font-size":"200%"}); birden fazla parametre için kullanım bu şekilde -->
+<!-- Eğer p lerde herhangi bir style kullanmasaydık yinede ekleme işlemi yapardı. -->
