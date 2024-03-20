@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        #panel,#buton{
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+            border-radius: 3px;
+        }
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#buton").click(function(){
+                $("#panel").slideDown(5000);
+            })
+            $("#durdur").click(function(){
+                $("#panel").stop();
+            })
+            //part: 2
+
+            $("#baslat").click(function(){ 
+                $("#div2").animate({left:'500px'},5000);
+                $("#div2").animate({fontSize:'500px'},5000);
+            })
+            $("#durdur1").click(function(){ //iki tane animate oldugu için birini durduracak
+                $("#div2").stop();
+            })
+            $("#durdur2").click(function(){//iki animate i de durduracak
+                $("#div2").stop(true);
+            })
+            $("#durdur3").click(function(){
+                $("#div2").stop(true,true);
+            })
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <button id="durdur">Slide Durdur</button>
+    <div id="buton">Tıkla</div>
+    <div id="panel">Merhabalar</div><br><hr>
+    <!-- part:2 -->
+    <button id="baslat">Başlat</button>
+    <button id="durdur1">Durdur</button>
+    <button id="durdur2">Hepsini Durdur</button>
+    <button id="durdur3">Durdur ve Bitir</button>
+    <div id="div2" style="background-color: #98bf21; height: 100px;width: 100px;position: absolute;">Merhaba</div>
+
+</body>
+</html>
+
+<!-- Bu derste stop() metodunu inceleyecegiz. -->
+
+<!-- Stop metodu bitmeden önce bir animate i yada effect i durdurmak için kullanılır.
+     Sözdizimi: $(selector).stop(hepsini durdur,sonagit)
+     *hepsini durdur parametresi animasyonun kuyrugunun temizlenip temizlenmeyecegini belirtir.varsayılan olarak false gelir.
+     *sonagit parametresi geçerli animasyonun hemen tamamlanıp tamamlanmayacagını belirtir.true yaparsak tüm animasyonların son halini getirmiş oluruz. 
+
+
+
+
+ -->
