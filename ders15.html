@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .onemli{
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .mavi{
+            color: blue;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h1,p").addClass("mavi");
+                //$("p").removeClass("onemli"); //toggle için kapattık
+                $("#t").toggleClass("onemli","mavi");
+            })
+            
+        })
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>Başlık 1</h1>
+    <p class="onemli">paragraf</p>
+    <p id="t">Toogle</p>
+    <button>Ekle</button>
+
+
+
+
+    
+</body>
+</html>
+
+<!-- Bu derste CSS classes özelliğinden bahsedeceğiz.  -->
+
+<!--CSS Classes özellikleri ile jquery ile birlikte html elementlerinin css özelliklerini değiştirebiliyoruz.bunun için addclass metodunu kullanıyoruz.
+    Bir Css sınıfına bir dom elementi eklemek için addclass() 
+    Bir Css sınıfına bir dom elementi silmek için removeclass() 
+
+    silinmişse yüklesin veya yüklenmişse silinsin işlemi için toggleclass()
+    
+
+
+
+
+
+ -->
