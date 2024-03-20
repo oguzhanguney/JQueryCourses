@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <style>
+
+
+
+    </style>
+
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //$("div").first().css("background-color","yellow");//first-last-eq(index) 
+            $("div").filter(".deneme").css("background-color","yellow");//filter yerine not diyerek deneme classı haricindekilere erişiriz.
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+        div1
+    </div>
+    <div class="deneme" style="border: 1px solid black;">
+        div2
+    </div>
+    <div class="deneme" style="border: 1px solid black;">
+        div3
+    </div>  
+    
+</body>
+</html>
+
+
+<!-- Bu derste Jquery ile filtreleme işlemlerini göreceğiz. -->
