@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+
+            //$("span").parent().css({"color":"red","border":"2px solid red"});
+            //$("span").parents("ul").css({"color":"red","border":"2px solid red"});
+            $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+
+
+        })
+        
+
+    </script>
+</head>
+<body>
+    <div class="ancestors">
+        <div style="width: 500px;">div(büyük-büyük baba)
+            <ul>ul (büyük baba)
+                <li>li(parent)
+                    <span>span</span>
+                </li>
+            </ul>
+
+        </div>
+        <div style="width: 500px;">div(büyük baba)
+            <p>p(parent)
+                <span>span</span>
+            </p>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<!-- Bu derste Traversing Nedir bunu öğreneceğiz. -->
+<!--Traversing diğer elemanlarla ilişkilerine dayanarak html ögelerini bulmak yada seçmek için kullanılır.
+    Bir dom ağacı boyunca traversing ile geçişleri sağlayabiliriz.
+    Jquery dom'u geçmemize izin veren çeşitli yöntemler sağlar.En büyük traversal yöntem ağaç geçişidir. 
+ -->
+
+ <!-- Bu derste Ancestors(atalar) inceleyeceğiz. -->
+ <!--
+    Bir Ata nesnesi parent büyük parent yada daha büyük parenttan oluşur.bunların hepsine ancestor denir
+    Bir nesnenin ata nesnelerini bulmak için parent- parents-parenttan metotlarını kullanacagız.
+    1)parent:
+        -parent metodu ile üstteki ilk parenti bulmamızı sağlar.yani span ın parentini kırmızıya boyadı
+    2)parents:
+        -parents metodu ile üstteki tüm parentları buluruz.yani spanın tüm parentlarını kırmızıya boyadı
+        -içine parametre alırsa örnegin ("ul") yazarsak parentsın bütün hepsinde sadece ul ler varsa boyadı.yani filtreleme yapabiliriz.
+    3)parentsUntil:
+        -belirli iki argüman arasındaki tüm ata ögeleri döndürür.yani spanın bütün atalarındaki dive kadar olanları boyar.
+
+
+
+  -->
