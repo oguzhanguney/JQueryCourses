@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dersleri</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                alert("Text:"+$("#test").text())
+            })
+            $("#btn2").click(function(){
+                alert("Text:"+$("#test").html())
+            })
+            $("#btn3").click(function(){
+                alert("Deger :"+$("#inp1").val());
+            })
+        })
+
+
+    </script>
+
+
+</head>
+<body>
+    <p id="test">Yazı yazalım <b>kalın</b> olsun</p>
+    <button id="btn1">Text</button>
+    <button id="btn2">Html</button><br><hr>
+
+    <p id="test2">İsminiz <input type=" text" id="inp1"></p>
+    <button id="btn3">Değeri Göster</button>
+
+
+
+    
+</body>
+</html>
+
+<!-- Bu derste Html Get işlemlerini inceleyeceğiz. -->
+
+<!-- Jquery ile Dom elementlerini manipüle edebiliriz.bu elementlere erişebilir ve de değiştirebiliriz.
+     -Manipüle etmek için text fonksiyonunu html fonksiyonunu ve val fonksiyonunu kullanıyoruz. 
+
+
+
+ -->
